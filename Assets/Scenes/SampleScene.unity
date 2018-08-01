@@ -256,6 +256,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &501394321
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4312487659483092, guid: be538b29b17cc5748aad88380ce0e45a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312487659483092, guid: be538b29b17cc5748aad88380ce0e45a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312487659483092, guid: be538b29b17cc5748aad88380ce0e45a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312487659483092, guid: be538b29b17cc5748aad88380ce0e45a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312487659483092, guid: be538b29b17cc5748aad88380ce0e45a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312487659483092, guid: be538b29b17cc5748aad88380ce0e45a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312487659483092, guid: be538b29b17cc5748aad88380ce0e45a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312487659483092, guid: be538b29b17cc5748aad88380ce0e45a, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: be538b29b17cc5748aad88380ce0e45a, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &695031661
 Prefab:
   m_ObjectHideFlags: 0
@@ -423,7 +465,7 @@ MonoBehaviour:
   LayerIDForTiles:
     serializedVersion: 2
     m_Bits: 256
-  tileHigthlight: {fileID: 695031662}
+  TileHighlight: {fileID: 695031662}
 --- !u!4 &2072073186
 Transform:
   m_ObjectHideFlags: 0

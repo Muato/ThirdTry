@@ -31,8 +31,6 @@ public class MouseControl : MonoBehaviour {
         // Tile select
         // Unit select TODO: 
 
-        //GetTile();
-
         if (MouseUpdateFunction != null)
             MouseUpdateFunction();
 	}
@@ -64,6 +62,9 @@ public class MouseControl : MonoBehaviour {
 
     void CameraDragMode()
     {
+		// Need to changeit a lot
+		// Raycast focus point on tilemap and drag that location around.
+
 		if (Input.GetMouseButtonUp(0))
 		{
 			Debug.Log("Drag mode: OFF");
@@ -79,7 +80,7 @@ public class MouseControl : MonoBehaviour {
 
 
 
-	Tile GetTile()
+	private Tile GetTile()
 	{
 		Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hitInfo;

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TileMap : MonoBehaviour {
 	// TODO LIST:
-	// Mouse control (13)
-	// Tile highlight
+	// Mouse control (13)	x
+	// Tile highlight		x
 	// Unit class
 
 
@@ -55,7 +55,7 @@ public class TileMap : MonoBehaviour {
 		// Debug.Log("How about here?");
 		if (gameObjectToTileMap.ContainsKey(TileGO))
 		{
-			Debug.Log("Can I get in here?");
+			//Debug.Log("Can I get in here?");
 			return gameObjectToTileMap[TileGO];
 		}
 		return null;
