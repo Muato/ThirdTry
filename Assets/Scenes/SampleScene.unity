@@ -252,8 +252,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1613744564}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -262,19 +261,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 436701896}
+    m_TransformParent: {fileID: 2072073186}
     m_Modifications:
     - target: {fileID: 4740594598775970, guid: 18b5319aad49dd649a1c6a42b73dea55, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.7932527
       objectReference: {fileID: 0}
     - target: {fileID: 4740594598775970, guid: 18b5319aad49dd649a1c6a42b73dea55, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.03
+      value: -0.030992122
       objectReference: {fileID: 0}
     - target: {fileID: 4740594598775970, guid: 18b5319aad49dd649a1c6a42b73dea55, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.8456615
       objectReference: {fileID: 0}
     - target: {fileID: 4740594598775970, guid: 18b5319aad49dd649a1c6a42b73dea55, type: 2}
       propertyPath: m_LocalRotation.x
@@ -302,11 +301,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4740594598775970, guid: 18b5319aad49dd649a1c6a42b73dea55, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.30000013
+      value: 0.30000025
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18b5319aad49dd649a1c6a42b73dea55, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &695031662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1106430557260940, guid: 18b5319aad49dd649a1c6a42b73dea55,
+    type: 2}
+  m_PrefabInternal: {fileID: 695031661}
 --- !u!4 &1613744564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4740594598775970, guid: 18b5319aad49dd649a1c6a42b73dea55,
@@ -419,6 +423,7 @@ MonoBehaviour:
   LayerIDForTiles:
     serializedVersion: 2
     m_Bits: 256
+  tileHigthlight: {fileID: 695031662}
 --- !u!4 &2072073186
 Transform:
   m_ObjectHideFlags: 0
@@ -428,7 +433,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7932527, y: 0.06099212, z: 0.8456615}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1613744564}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

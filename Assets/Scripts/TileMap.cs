@@ -25,6 +25,8 @@ public class TileMap : MonoBehaviour {
     public void GenerateMap()
     {
         tiles = new Tile[width, length];
+		gameObjectToTileMap = new Dictionary<GameObject, Tile>();
+
         for (int x = 0; x < width; x++)
         {
             for (int z = 0; z < length; z++)
@@ -37,6 +39,8 @@ public class TileMap : MonoBehaviour {
                     t.Position(),
                     Quaternion.identity,
                     this.transform);
+
+				gameObjectToTileMap[tile] = t;
 
                 MeshRenderer mr = tile.GetComponentInChildren<MeshRenderer>();
                 mr.material = materials[1]; //materials[Random.Range(0, materials.Length)];

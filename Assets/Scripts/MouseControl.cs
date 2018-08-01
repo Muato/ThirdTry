@@ -7,6 +7,7 @@ public class MouseControl : MonoBehaviour {
 	TileMap tileMap;
 
 	public LayerMask LayerIDForTiles;
+	public GameObject TileHighlight;
 
 
 	delegate void MouseUpdateHandler(); // (object source, EventArgs args);
@@ -52,9 +53,13 @@ public class MouseControl : MonoBehaviour {
         else if(Input.GetMouseButtonUp(0))
         {
 			Tile TempTile = GetTile();
-			Vector3 pos = TempTile.Position();
-            Debug.Log("Up: " + pos.ToString("F4"));
-        }
+			if (TempTile != null)
+			{
+				Vector3 tilePos = TempTile.Position();
+				Debug.Log("Up: " + tilePos.ToString("F4"));
+				TileHighlight.transform.position = new Vector3(tilePos.x, TileHighlight.transform.position.y, tilePos.z);
+			}
+		}
     }
 
     void CameraDragMode()
@@ -84,7 +89,7 @@ public class MouseControl : MonoBehaviour {
 		{
 			//Debug.Log(hitInfo);
 			Debug.Log("Hit something");
-			GameObject TileGO = hitInfo.collider.gameObject;
+			GameObject TileGO = hitInfo.rigidbody.gameObject;
 			
 			return tileMap.GetTileFromGameObject(TileGO);
 		}
