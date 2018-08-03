@@ -13,19 +13,26 @@ public class TileMap : MonoBehaviour {
 	void Start ()
     {
         GenerateMap();
+		GenerateSquad();
 	}
 
     public int width = 3, length = 4;
     public GameObject TilePrefab;
+	public GameObject SquadPrefab;
     public Material[] materials;
 
     private Tile[,] tiles;
+	private Dictionary<Tile, GameObject> tileToGameObjectMap;
 	private Dictionary<GameObject, Tile> gameObjectToTileMap;
+
+	//private Squad squad1;
 
     public void GenerateMap()
     {
         tiles = new Tile[width, length];
+		tileToGameObjectMap = new Dictionary<Tile, GameObject>();
 		gameObjectToTileMap = new Dictionary<GameObject, Tile>();
+		
 
         for (int x = 0; x < width; x++)
         {
@@ -40,6 +47,7 @@ public class TileMap : MonoBehaviour {
                     Quaternion.identity,
                     this.transform);
 
+				tileToGameObjectMap[t] = tile;
 				gameObjectToTileMap[tile] = t;
 
                 MeshRenderer mr = tile.GetComponentInChildren<MeshRenderer>();
@@ -59,5 +67,16 @@ public class TileMap : MonoBehaviour {
 			return gameObjectToTileMap[TileGO];
 		}
 		return null;
+	}
+
+	public Tile GetTileAt(int x, int z)
+	{
+		return tiles[x, z];
+	}
+
+	public void GenerateSquad()
+	{
+		GameObject tile = tileToGameObjectMap[tiles[1, 2]];
+		GameObject squad = (GameObject)Instantiate(SquadPrefab, tile.transform);
 	}
 }

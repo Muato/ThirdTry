@@ -62,7 +62,7 @@ public class MouseControl : MonoBehaviour {
 
     void CameraDragMode()
     {
-		// Need to changeit a lot
+		// Need to change it a lot
 		// Raycast focus point on tilemap and drag that location around.
 
 		if (Input.GetMouseButtonUp(0))

@@ -51,3 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7df5c8f63236ae4ab3c562c64b79757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PeasantPrefab: {fileID: 1575988398402222, guid: 37c461329cc93b645b5e9f1a74286f3d,
+    type: 2}

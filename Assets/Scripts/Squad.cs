@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class Squad : MonoBehaviour
 {
-	List<Unit> unitList;
+	private GameObject parentTilePrefab;
+	private Tile parentTile;
+	public GameObject PeasantPrefab;
+	void Start()
+	{
+		parentTilePrefab = this.transform.parent.gameObject;
+		Transform t = parentTilePrefab.GetComponentInChildren<Transform>();
+
+		GameObject unit1 = (GameObject)Instantiate(PeasantPrefab,
+			t.position,
+			Quaternion.identity,
+			this.transform);
+	}
 	
 }
